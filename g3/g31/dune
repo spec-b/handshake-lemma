@@ -1,0 +1,7 @@
+(executable 
+(name gradual_verification)
+ (foreign_stubs
+  (language c)
+  (names c_bindings))
+(libraries domainslib )
+(modules gradual_verification term_representation)) 

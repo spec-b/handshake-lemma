@@ -1,0 +1,23 @@
+# dune exec ./gradual_verification.exe
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /Users/taibaabid/.cache/dune/db
+# Workspace root: /Users/taibaabid/Desktop/graph/g3/g31
+# Auto-detected concurrency: 10
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /Users/taibaabid/.opam/default/bin/ocamlc.opt -config > /var/folders/bf/y2plxqfd3c5gbjvvnrwmb5540000gn/T/dune_110a9d_output
+$ (cd _build/default && /Users/taibaabid/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I .gradual_verification.eobjs/byte -I .gradual_verification.eobjs/native -I /Users/taibaabid/.opam/default/lib/domain-local-await -I /Users/taibaabid/.opam/default/lib/domain_shims -I /Users/taibaabid/.opam/default/lib/domainslib -I /Users/taibaabid/.opam/default/lib/ocaml/threads -I /Users/taibaabid/.opam/default/lib/ocaml/unix -I /Users/taibaabid/.opam/default/lib/saturn -I /Users/taibaabid/.opam/default/lib/saturn_lockfree -I /Users/taibaabid/.opam/default/lib/thread-table -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o .gradual_verification.eobjs/native/dune__exe__Gradual_verification.cmx -c -impl gradual_verification.ml)
+> File "gradual_verification.ml", line 140, characters 2-19:
+> 140 |   parallel_verify g
+>         ^^^^^^^^^^^^^^^^^
+> Error: This expression has type string but an expression was expected of type
+>          unit
+[2]
